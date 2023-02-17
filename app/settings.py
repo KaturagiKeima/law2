@@ -23,7 +23,7 @@ SQLITE = env.get_value('SQLITE', cast = bool, default = True)
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = [env('IP_ADDRESS'), 'app.com', 'www.app.com', 'localhost']
+    ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'Sinobu.pythonanywhere.com']
 
 
 INSTALLED_APPS = [

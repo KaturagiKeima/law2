@@ -1,0 +1,29 @@
+{% extends 'law/base.html' %} {% load static %} {% block main %}
+
+<div class="container">
+  <div class="m-md-5 m-sm-3">
+    <div class="row">
+      <div class="col-md-3 col-sm-1"></div>
+      <div class="col-md-6 col-sm-11">
+        <div class="text-center">
+          <h1 class="f-x-large">一問一答</h1>
+          <h5 class="f-large">出題する問題を選択してください</h5>
+        </div>
+        <div class="my-auto">
+          <div class="py-sm-3">
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="text-left f-15">
+                <p class="f-large">{{ form.class_times }}</p>
+                <p class="f-large">問題数：{{ form.sum_question }}</p>
+              </div>
+              <button type="submit">OK!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

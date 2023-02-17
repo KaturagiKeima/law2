@@ -1,0 +1,19 @@
+{% load static %}
+
+<link href="{% static 'law/css/nav.css' %}" rel="stylesheet" />
+
+<link
+  href="https://fonts.googleapis.com/css?family=Oswald:300"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<div class="navgation">
+  <a href="/" class="btn">Home</a>
+  <a href="{% url 'law:selection_practice' %}" class="btn">Practice</a>
+  <a href="{% url 'law:test' %}" class="btn">Test</a>
+  <a href="{% url 'law:list' %}" class="btn">list</a>
+</div>
+
+
+<script src="{% static 'law/js/nav.js' %}" type="text/javascript"></script>

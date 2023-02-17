@@ -1,0 +1,25 @@
+{% extends 'law/base.html' %} {% load static %} {% block main %}
+
+<main>
+  <div class="position-absolute">
+    <img
+      class="bg-center-cover mx-auto img-top"
+      src="{% static 'law/img/home_main.jpg' %}"
+    />
+
+    <div class="position-absolute top">
+      <div class="m-5">
+        <div class="row">
+          <div class="text-left">
+            <h3 class="f-sm-15 f-large">
+              私が成功することができたのは、仕事場に時計がなかったおかげである。
+            </h3>
+            <p class="text-right f-medium">トーマス・エジソン</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

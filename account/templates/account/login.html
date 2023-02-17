@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>うさぎでも分かる法律学</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link href="{% static 'account/css/bootstrap.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <p class="text-primary">yooko</p>
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h1 class="text-success">ログイン</h1>
+          <form action="" method="POST">
+            {% csrf_token %} {{ form.username.label }} {{ form.username }}
+            {{form.password.label}} {{ form.password }}
+            <button type="submit">ログイン</button>
+          </form>
+          <a href="signup">新規登録</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

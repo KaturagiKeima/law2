@@ -1,0 +1,35 @@
+{% extends 'law/base.html' %} {% load static %} {% block main %}
+
+<div class="container">
+  <div class="my-md-5 my-sm-4">
+    <div class="row">
+      <div class="col-md-2 col-sm-1"></div>
+      <div class="col-md-8 col-sm-11">
+        <div class="my-auto">
+          <h1 class="f-x-large text-light">解答</h1>
+          <p class="f-medium m-0 pt-4 text-success">{{title}}</p>
+          <p class="f-x-large">問題：{{quest | linebreaksbr}}</p>
+          <p class="f-large">あなたの解答：{{answer}}</p>
+          <div class="text-center">
+            {% if kaitou == "正解" %}
+            <p class="f-x-large text-danger">{{kaitou}}</p>
+            {% else %}
+            <p class="f-x-large text-info">{{kaitou}}</p>
+            {% endif %}
+          </div>
+          <p class="f-large">答え：{{kai}}</p>
+          {% if exp %}
+          <p class="f-medium">解説：{{exp}}</p>
+          {% endif %}
+          <div class="text-right border-light">
+            <a class="f-medium btn-outline-primary" href="{{slug}}"
+              >次の問題へ</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

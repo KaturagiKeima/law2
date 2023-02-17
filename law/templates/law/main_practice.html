@@ -1,0 +1,29 @@
+{% extends 'law/base.html' %} {% load static %} {% block main %}
+
+<div class="container">
+  <div class="my-md-5 my-sm-4">
+    <div class="row">
+      <div class="col-md-2 col-sm-1"></div>
+      <div class="col-md-8 col-sm-11">
+        <div class="my-auto">
+          <h1 class="f-x-large">{{qcount}}問目</h1>
+          <form action="" method="POST">
+            {% csrf_token %}
+            <p class="f-medium m-0 pt-4 text-success">{{title}}</p>
+            <p class="f-large">問題：{{quest | linebreaksbr}}</p>
+            <div class="py-3">
+              {% for f in form %}
+              <p class="f-medium">解答： {{f}}</p>
+              {% endfor %}
+              <div class="text-right">
+                <button type="submit">答え合わせ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

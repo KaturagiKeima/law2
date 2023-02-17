@@ -1,0 +1,50 @@
+{% extends 'law/base.html' %} {% load static %} {% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center">
+        <div class="p-lg-5 p-md-3">
+          <h1>過去の履歴</h1>
+        </div>
+        <div class="overflow-auto-scroll">
+          <table
+            class="table table-dark table-striped f-small table-sm table_text"
+          >
+            <thead>
+              <tr>
+                <th scope="col">タイトル</th>
+                <th scope="col">問題</th>
+                <th scope="col">あなたの解答</th>
+                <th scope="col">正答</th>
+                <th scope="col">答え</th>
+                <th scope="col">時間</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for model in models %}
+              <tr>
+                <td class="text-truncate">{{ model.question.title}}</td>
+                <td class="text-truncate">{{model.question.qestion}}</td>
+                <td>{{model.input_answer}}</td>
+                <td>{{model.status}}</td>
+                <td>{{model.question.answer}}</td>
+                <td>{{model.created}}</td>
+                <td>
+                  <a
+                    class="text-warning"
+                    href="{{ model.question.get_absolute_url }}"
+                    >復習</a
+                  >
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

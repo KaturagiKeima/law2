@@ -1,0 +1,152 @@
+body {
+  background-color: #353144;
+  color: white;
+}
+
+.rabbit-color {
+  color: #f39800;
+}
+
+header {
+  background-color: #353144;
+}
+
+header i {
+  color: white;
+}
+
+.sticky-header__header {
+  /* Stick to the top */
+  position: sticky;
+  top: 0;
+}
+
+main img {
+  width: 100%;
+}
+
+.bg_center_cover {
+  background-size: cover;
+  background-position: bottom;
+}
+
+.img-top {
+  top: -30%;
+}
+
+.table_text {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table_text td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table_text th {
+  position: sticky;
+  background-color: #353144;
+  top: 0;
+  left: 0;
+}
+
+.overflow-auto-scroll {
+  overflow: auto;
+  height: 70vh;
+}
+
+.top {
+  top: 0;
+}
+
+.f-15 {
+  font-size: 20px;
+}
+
+.f-x-large {
+  font-size: xx-large;
+}
+
+.f-large {
+  font-size: x-large;
+}
+
+.f-medium {
+  font-size: large;
+}
+
+.f-small {
+  font-size: 17px;
+}
+
+@media screen and (max-width: 790px) {
+  .f-x-large {
+    font-size: x-large;
+  }
+
+  .f-large {
+    font-size: large;
+  }
+
+  .f-medium {
+    font-size: medium;
+  }
+
+  .f-small {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main img {
+    box-sizing: border-box;
+    background-size: cover;
+    object-fit: cover;
+    height: 100vh;
+  }
+
+  .f-x-large {
+    font-size: large;
+  }
+
+  .f-sm-15 {
+    font-size: large;
+  }
+
+  .f-large {
+    font-size: medium;
+  }
+
+  .f-medium {
+    font-size: small;
+  }
+
+  .f-small {
+    font-size: x-small;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .f-x-large {
+    font-size: medium;
+  }
+
+  .f-large {
+    font-size: small;
+  }
+
+  .f-medium {
+    font-size: x-small;
+  }
+
+  .f-small {
+    font-size: xx-small;
+  }
+
+  .main img {
+    width: 50%;
+    height: 100%;
+  }
+}

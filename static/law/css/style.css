@@ -54,6 +54,11 @@ main img {
 
 .overflow-auto-scroll {
   overflow: auto;
+  height: 100vh;
+}
+
+.overflow-auto-scroll {
+  overflow: auto;
   height: 70vh;
 }
 

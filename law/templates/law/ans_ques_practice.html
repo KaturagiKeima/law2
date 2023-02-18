@@ -18,8 +18,8 @@
             {% endif %}
           </div>
           <p class="f-large">答え：{{model.question.answer}}</p>
-          {% if exp %}
-          <p class="f-medium">解説：{{model.question.explanation}}</p>
+          {% if model.question.explanation %}
+          <p class="f-medium alert alert-info" role="alert">解説<br>{{model.question.explanation | linebreaksbr}}</p>
           {% endif %}
           <div class="text-right border-light">
             <a

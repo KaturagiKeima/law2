@@ -2,8 +2,7 @@
 <div class="container">
   <div class="my-md-5 my-sm-4">
     <div class="row">
-      <div class="col-md-2 col-sm-1"></div>
-      <div class="col-md-8 col-sm-11">
+      <div class="col-12">
         <div class="my-auto">
           <div class="text-center">
             
@@ -18,12 +17,12 @@
             <p class="f-medium m-0 pt-4 text-primary">
               {{ forloop.counter }}問目
             </p>
-            <p class="f-large">問題：{{model.qestion}}</p>
+            <p class="f-large">{{model.qestion | linebreaksbr}}</p>
             <div class="collapse" id="collapseExample">
        
-            <p class="f-medium">答え： {{model.answer}}</p>
-            {% if exp %}
-          <p class="f-medium">解説：{{model.explanation}}</p>
+            <p class="f-medium text-warning">答え： {{model.answer}}</p>
+            {% if model.explanation %}
+          <p class="f-medium alert alert-info" role="alert">解説<br>{{model.explanation | linebreaksbr}}</p>
           {% endif %}
                 </div>
             {% endfor %}

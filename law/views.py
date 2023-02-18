@@ -8,6 +8,8 @@ from django.shortcuts import render
 from .models import User_date, Question, User_question
 from .forms import ClassTimeForm, UserQuestionForm
 
+TEST_QUESTION = 20
+
 class IndexView(LoginRequiredMixin, TemplateView):
 
     template_name = 'law/index.html'
@@ -164,7 +166,7 @@ class TestView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context = {
-            'models' : Question.objects.order_by('?').all()
+            'models' : Question.objects.order_by('?')[:TEST_QUESTION]
         }
         return context
 
